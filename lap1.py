@@ -4,7 +4,7 @@ while(True) :
     if num.isdigit() :
         num = float(num)
         break
-    else : num = input("pls enter number : ")
+    else : num = input("Pls enter number : ")
 start = 15
 end = 35
 
@@ -13,18 +13,18 @@ print(num >= start and num <= end)
 ########################
 
 age = input("Enter age : ")
-copon = input("Enter copon if you have if you dont enter 0 : ")
-
-print(int(age) < 18) or (int(age) > 65) or (copon != '0')
+copon = input("Enter the coupon if you have it If you don't have it enter 0 : ")
+age = int(age)
+print(age < 18 or age > 65 or copon != '0')
 
 #########################
 
-name = input("enter your name : ")
+name = input("Enter your name : ")
 print(f"Hello, {name}")
 
 ######################
 
-fullName = input("enter first and last name with space between them : ")
+fullName = input("Enter your first and last name with a space between them : ")
 
 fullName = fullName.split()
 name = ""
@@ -35,8 +35,8 @@ print(name)
 
 #################################
 
-name = input("enter your name : ")
-age = input("enter you age : ")
+name = input("Enter your name : ")  
+age = input("Enter you age : ")
 
 print(f"{name} is {age} years old")
 print("{name} is {age} years old".format(name=name, age=age))
