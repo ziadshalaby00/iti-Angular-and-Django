@@ -1,0 +1,64 @@
+{
+    "iti_office": [
+        {
+            "ID": "57356dde-c2e8-482e-a8a8-c05e54de86c0",
+            "name": "ziad",
+            "money": 2000,
+            "mood": null,
+            "healthRate": null,
+            "email": "shalabyziad94@gmail.com",
+            "salary": 3000,
+            "distanceToWork": 20,
+            "car": {
+                "name": "Fiat 128",
+                "fuelRate": 100,
+                "velocity": null
+            }
+        },
+        {
+            "ID": "3d17012a-9fc6-4f50-b8a4-356978d997c6",
+            "name": "mohamed",
+            "money": 2000,
+            "mood": null,
+            "healthRate": null,
+            "email": "shalabyziad94@gmail.com",
+            "salary": 3000,
+            "distanceToWork": 20,
+            "car": {
+                "name": "Fiat 128",
+                "fuelRate": 100,
+                "velocity": null
+            }
+        },
+        {
+            "ID": "560c6301-e0b5-44d9-b110-918519f071ca",
+            "name": "ali",
+            "money": 2000,
+            "mood": null,
+            "healthRate": null,
+            "email": "shalabyziad94@gmail.com",
+            "salary": 3000,
+            "distanceToWork": 20,
+            "car": {
+                "name": "Fiat 128",
+                "fuelRate": 100,
+                "velocity": null
+            }
+        },
+        {
+            "ID": "41e6802a-9d67-4eb3-b46d-9a4aacc87918",
+            "name": "sameer",
+            "money": 2000,
+            "mood": null,
+            "healthRate": null,
+            "email": "shalabyziad94@gmail.com",
+            "salary": 3000,
+            "distanceToWork": 20,
+            "car": {
+                "name": "Fiat 128",
+                "fuelRate": 100,
+                "velocity": null
+            }
+        }
+    ]
+}
