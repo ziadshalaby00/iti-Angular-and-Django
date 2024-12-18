@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block insideContainer %}
+<div id="content" class="w-100"></div>
+<script>
+    email = localStorage.getItem("email")
+    message = localStorage.getItem("message")
+    let content = `
+        <h1 class="mb-5">You Have Submited SuccessFull</h1>
+        <div>
+            <h1>Email is :</h1> 
+            ${email}
+        </div>
+        <div>
+            <h1>message is:</h1>
+            <p style="max-width:500px; word-wrap: break-word; white-space: pre-wrap;">${message}</p>
+        </div>
+    `
+    document.getElementById("content").innerHTML = content
+</script>
+{% endblock insideContainer %}

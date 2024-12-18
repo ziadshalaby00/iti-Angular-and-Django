@@ -1,6 +1,9 @@
 ################### TASK (2) ###################
 import json
 import uuid
+# import smtplib
+# from email.message import EmailMessage
+# from email.mime.text import MIMEText
 
 class Person() :
     def __init__(self,name,money) :
@@ -36,7 +39,7 @@ class Employee(Person) :
         def __init__(self, name, money, car, email, salary, distanceToWork) :
             super().__init__(name,money)
 
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid.uuid4()) 
             print(self.id )
             
             self.salary = salary
@@ -59,16 +62,6 @@ class Employee(Person) :
         def refuel(self, gasAmount = 100): 
             self.car.fuelRate += gasAmount
             
-        def send_mail(self,to, subject, msg, receiver_name) :
-            file = open("EmailFile.md", 'w')
-            file.write(
-f"""From: {self.email}
-To: {to}
-
-    Hi, {subject}
-    {msg}
-{receiver_name}""")
-            
 
 class Car() :
     def __init__(self,name, fuelRate) :
@@ -77,9 +70,6 @@ class Car() :
         self.velocity = None
         
     def run(self, velocity, distance) :
-        if(velocity > 200 or velocity < 0) :
-            print("velocity must be between 0 and 200")
-            return
         
         self.velocity = velocity
         self.fuelRate -= 10 * (distance/10)
@@ -97,11 +87,12 @@ class Car() :
         else :
             print("The car stopped because the fuelRate was finished.")
             print(f"The distance before the workplace is: {distanceRem} km")
+            
 
 class Office() :
     employeesNum = None
     name = None
-    employees = []
+    employees = [] # list of objects
     
     @classmethod
     def setEmployeesInJsonFile(cls) :

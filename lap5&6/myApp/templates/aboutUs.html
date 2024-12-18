@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+
+{% block insideContainer %}
+    <p>
+    <h1>About ITI Damanhour Branch</h1>
+
+    The <strong>Information Technology Institute (ITI)</strong> is a leading institution dedicated to training and empowering youth in the field of information technology.
+    The Damanhour branch is one of the key locations offering advanced programs to develop technical and professional skills, preparing graduates to thrive in the ever-evolving tech industry.
+
+    <h3>Our Mission:</h3>
+    We aim to empower youth through high-quality technical education, equipping them with the tools and skills to innovate and excel in various IT domains.
+
+    <h3>Our Services:</h3>
+    <ul>
+        <li>Specialized training programs in cutting-edge technologies.</li>
+        <li>Hands-on workshops to enhance practical skills.</li>
+        <li>Partnerships with leading companies to provide employment opportunities for graduates.</li>
+    </ul>
+    <h3>Why Choose ITI Damanhour?</h3>
+    <ul>
+    <li>Up-to-date and dynamic curriculum.</li>
+    <li>Expert trainers with industry experience.</li>
+    <li>State-of-the-art learning environment equipped with modern technologies.</li>
+    <li>Ongoing support and career guidance for alumni.</li>
+    </ul>
+    <h4 class="text-body-secondary">Contact Us:</h4>
+    For more information, visit our Damanhour branch or <a href="{% url 'contactUs' %}">contact us</a>
+    </p>
+    <img class="w-100 my-4" src="https://django-articles-app1.s3.amazonaws.com/media/article/images/DjangoFeaturedImage.jpeg">
+{% endblock insideContainer %}

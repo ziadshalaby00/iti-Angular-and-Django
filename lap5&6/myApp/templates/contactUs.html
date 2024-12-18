@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block insideContainer %}
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Email</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="test@gmail.com">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Message</label>
+    <textarea class="form-control" id="formGroupExampleInput2" placeholder="Message..."></textarea>
+  </div>
+  <div class="mb-3">
+    <button type="button" class="btn btn-outline-success" id="Submit">Submit</button>
+  </div>
+</div>
+<script>
+    document.getElementById("Submit").addEventListener("click", () => {
+        let email = document.getElementById("formGroupExampleInput").value;
+        let message = document.getElementById("formGroupExampleInput2").value
+        localStorage.setItem("email", email);
+        localStorage.setItem("message", message);
+        window.location.href = "/contactUsDataShow";
+    });
+</script>
+{% endblock insideContainer %}
