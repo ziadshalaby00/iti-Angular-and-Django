@@ -1,0 +1,26 @@
+{% extends "login.html" %}
+
+{% block main-content %}
+<div class="container">
+<div class="card mt-5 m-auto w-50 border border-1 shadow-sm border-light" style="background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px)">
+  <div class="card-body">
+        <div class="text-center mt-1" style="font-size: 32px; font-weight: bold;">Signup</div>
+        <form method="POST" class="mt-1 w-100" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="username" class="form-label">User Name</label>
+              <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+              <label for="Password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="Password" name="Password" required>
+            </div>
+            <div class="mb-3">
+                <label for="profile_picture" class="form-label">Your Image</label>
+                <input class="form-control" type="file" id="profile_picture" required name="profile_picture">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3">Signup</button>
+          </form>
+    </div>
+</div>
+{% endblock main-content %}

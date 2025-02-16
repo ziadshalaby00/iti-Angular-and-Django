@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+{% block body-background %}
+<body style="background-color: #676aec;">
+{% endblock body-background %}
+    <nav class="navbar navbar-expand-lg bg-dark  navbar-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav gap-2 align-items-center invisible" id="user-info">
+                <img class="rounded-circle border border-primary border-2" style="width: 60px; height: 60px;"
+                src="{{ userprofile.profile_picture.url }}" 
+                alt=""
+                >
+                <div class="text-light" style="font-weight: bold;">{{user.username}}</div>
+            </ul>
+            <ul class="navbar-nav gap-2">
+                <a href="{% url 'profile' %}" class="btn btn-success">profile</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-secondary">login</a>
+                <a href="{% url 'signup' %}" class="btn btn-outline-secondary">signup</a>
+                <a href="{% url 'logout' %}" class="btn btn-outline-danger">logout</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    {% block main-content %}
+    <div class="container">
+        <div class="card mt-5 m-auto w-50 border border-1 shadow-sm border-light" style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(5px)">
+            <div class="card-body">
+                <div class="text-center mt-1" style="font-size: 32px; font-weight: bold;">Login</div>
+                <form method="POST" class="mt-1 w-100">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                    <label for="username" class="form-label">User Name</label>
+                    <input type="text" class="form-control" required name="username" id="username" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" class="form-control" required id="Password" name="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                </form>
+            </div>
+        </div> 
+        {% endblock main-content %}
+    </div>
+
+    <script>
+        let is_user = '{{ user }}';
+        console.log(is_user)
+        if (is_user != "None") {
+            document.getElementById("user-info").classList.remove("invisible")
+        }else {
+            document.getElementById("user-info").classList.add("invisible")
+        }
+    </script>
+</body>
+</html>
