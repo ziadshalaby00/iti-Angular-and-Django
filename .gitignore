@@ -38,3 +38,44 @@ cython_debug/
 .ruff_cache/
 .mypy_cache/
 .dmypy.json
+
+#====================================================================================================#
+
+# بيئة Node.js
+node_modules/
+package-lock.json
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# إخراج البناء
+dist/
+out-tsc/
+
+# بيئة Angular
+.angular/
+
+# ملفات التكوين والبيانات المخفية
+/.vscode/
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+/.cache/
+.DS_Store
+Thumbs.db
+
+# بيئة الاختبار والتغطية
+coverage/
+*.lcov
+
+# بيئة التوزيع
+src/environments/environment*.ts
+
+# ملفات التكوين الخاصة بالمحررات
+/.editorconfig
+/.eslintcache
+/.prettierignore
+/.prettierrc
+
+# مؤقتات التشغيل
+/tmp/
