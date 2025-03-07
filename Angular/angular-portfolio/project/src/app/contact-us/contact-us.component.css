@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-image: url('https://crosseyedpianist.com/wp-content/uploads/2011/06/flow-dual-ring-1-jpeg.jpg');
+  height: 400px;
+}
+.container > div {
+  width: 25%;
+  height: 75%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  margin-left: 10%;
+}
+.container > div button {
+  width: 120px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.container > div button:hover {
+  background-color: #afaeae;
+  color: black;
+}

@@ -1,0 +1,29 @@
+.container {
+  height: auto;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+button {
+  width: 120px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #afaeae;
+  color: black;
+}
+.social {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 45px;
+}

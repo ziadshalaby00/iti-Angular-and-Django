@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 30px 20%;
+  margin: auto;
+  background-color: hsl(0, 0%, 13%);
+  color: white;
+  text-align: center;
+}
+.container-inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 100px;
+}
+.skills div {
+  margin-bottom: 20px;
+  background-color: #555;
+  text-align: start;
+  padding: 15px;
+  position: relative;
+}
+.skills div::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 60%;
+  right: 20%;
+  top: 0;
+  background-color: #888;
+}
+.skills div::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 70%;
+  right: 0;
+  top: 0;
+  background-color: #aaa;
+}

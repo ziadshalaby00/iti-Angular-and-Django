@@ -1,0 +1,34 @@
+.container {
+  padding: 20px 40px;
+  min-height: 300px;
+}
+.container  h1 {
+  margin-bottom: 40px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.item1, .item2 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.item1 div, .item2 div {
+  width: 250px;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #678;
+}
+.item1 div:hover, .item2 div:hover {
+  background-color: #567;
+}
