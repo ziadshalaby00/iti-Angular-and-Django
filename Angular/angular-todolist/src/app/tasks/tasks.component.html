@@ -1,0 +1,10 @@
+<div class="container">
+  @for (task of tasks; track task.id) {
+    <mat-card class="task" [class.done]="task.isDone" appearance="outlined">
+      <mat-card-content class="des">{{task.des}}</mat-card-content>
+      <mat-checkbox class="example-margin" [checked]="task.isDone" (click)="changeState(task.id)"></mat-checkbox>
+    </mat-card>
+  } @empty {
+    <h2>No Tasks</h2>
+  }
+</div> 

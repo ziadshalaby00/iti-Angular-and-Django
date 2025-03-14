@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>To Do List</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Create Task</mat-label>
+      <input matInput placeholder="Desciption" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" >
+    </mat-form-field>
+    <div class="example-button-row">
+      <button mat-flat-button class="btn" (click)="sendValue()">Create</button>
+    </div>
+  </form>
+</div>
