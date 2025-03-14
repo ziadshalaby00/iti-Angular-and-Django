@@ -13,7 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  value: string = "defult";
+  value!: string;
 
   @Output() valueEvenet: EventEmitter<string> = new EventEmitter<string>();
   sendValue() {

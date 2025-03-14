@@ -13,18 +13,30 @@
   font-size: 20px;
 }
 .task {
-  width: 50%;
+  width: 60%;
   padding: 5px;
   margin: 10px 0;
-  background-color: gray;
+  background-color: #b8c9eb;
   display: flex; 
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
 }
 .task.done {
-  background-color: rgb(24, 199, 24);
+  background-color: #0ce98288;
 }
 .des {
   padding-top: 0 !important;
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cancel {
+  color: rgb(160, 17, 17);
+  cursor: pointer;
+}
+.cancel:hover {
+  color: rgb(128, 45, 45);
 }
