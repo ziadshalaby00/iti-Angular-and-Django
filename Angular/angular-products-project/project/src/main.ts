@@ -4,8 +4,11 @@ import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 
+import { provideHttpClient } from '@angular/common/http'; // استيراد HttpClientModule
+
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [],
   template: ``,
 })
@@ -15,6 +18,7 @@ export class App {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes)
+    provideRouter(routes),
+    provideHttpClient()
   ]
-});
+}).catch(err => console.error(err));
