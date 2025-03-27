@@ -1,22 +1,33 @@
-<div id="id01" class="modal">
-  <form class="modal-content" action="/action_page.php" method="post">
-    <h2 style="text-align: center;">Login</h2>
-      <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-  
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-          
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-      </div>
-  
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
-    </form>
+<form style="border:1px solid #ccc; width: 60%; margin: 40px auto;"
+#loginForm="ngForm" (ngSubmit)="submitData(loginForm)">
+
+  <div class="container">
+    <h1 style="text-align: center; margin-bottom: 10px">Login</h1>
+    <hr>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" #username="ngModel" id="username"
+    placeholder="Enter Username" ngModel name="username" required>
+
+    @if (username.invalid && username.touched) {
+      <div style="color: red; text-align:center; margin:10px 0">Name is required.</div>
+    }
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" #Password="ngModel"
+    minlength="8" placeholder="Enter Password" ngModel name="password" required>
+
+    @if (Password.invalid && Password.touched) {
+      <div style="color: red; text-align:center; margin:10px 0">Password is required and must be 8 or more.</div>
+    }
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <div class="clearfix">
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </div>
   </div>
+
+</form>

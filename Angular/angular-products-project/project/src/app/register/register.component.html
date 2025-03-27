@@ -1,28 +1,38 @@
-<form action="action_page.php"
-style="border:1px solid #ccc; width: 75%; margin: 20px auto;">
+<form action="" [formGroup]="formData" (ngSubmit)="submitData()"
+style="border:1px solid #ccc; width: 60%; margin: 40px auto;">
 
   <div class="container">
-    <h1 style="text-align: center">Sign Up</h1>
+    <h1 style="text-align: center; margin-bottom: 10px">Sign Up</h1>
     <hr>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="username"><b>Username</b></label>
+    <input type="text" id="username" formControlName="username"
+     placeholder="Enter username" required>
+
+    @if (username?.invalid && username?.touched) {
+      <div style="color: red; text-align:center; margin:10px 0">Username is required.</div>
+    }
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" formControlName="psw" minlength="8"
+    placeholder="Enter Password" required>
+
+    @if (psw?.invalid && psw?.touched) {
+      <div style="color: red; text-align:center; margin:10px 0">Password is required.</div>
+    }
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input type="password" formControlName="pswrepeat" minlength="8"
+    placeholder="Repeat Password" required>
 
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-    </label>
-
-    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    @if (pswrepeat?.invalid && pswrepeat?.touched) {
+      <div style="color: red; text-align:center; margin:10px 0">Repeat Password is required.</div>
+    }
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" style="width: 100%;" [disabled]="formData.invalid"
+       class="signupbtn">Sign Up</button>
     </div>
   </div>
+
 </form>
